@@ -1,0 +1,84 @@
+{
+  "tests": [
+    {
+      "name": "Ex1 Test1",
+      "setup": "gcc ./src/Exercise1.c -o ./bin/ex1.out -lm",
+      "run": "./bin/ex1.out abcabcdb",
+      "input": "",
+      "output": "4",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "Ex1 Test2",
+      "setup": "",
+      "run": "./bin/ex1.out ababcdababcdef",
+      "input": "",
+      "output": "6",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "Ex2 Test1",
+      "setup": "gcc ./src/Exercise2.c -o ./bin/ex2.out -lm",
+      "run": "./bin/ex2.out 0 1 3 6 5 9 8",
+      "input": "",
+      "output": "[2 4]",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "Ex2 Test2",
+      "setup": "",
+      "run": "./bin/ex2.out 3 0 2 6 5 8 9",
+      "input": "",
+      "output": "[0 3]",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "Ex3 Test1",
+      "setup": "gcc ./src/Exercise3.c -o ./bin/ex3.out -lm",
+      "run": "./bin/ex3.out 4 0 2 5 8 6 1 3 4 6 7 9",
+      "input": "",
+      "output": "Median is 2.0",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "Ex3 Test2",
+      "setup": "",
+      "run": "./bin/ex3.out 3 0 2 5 6 1 3 4 6 8 9",
+      "input": "",
+      "output": "Median is 3.0",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 15
+    },
+    {
+      "name": "Ex4 Test1",
+      "setup": "gcc ./src/Exercise4.c -o ./bin/ex4.out -lm",
+      "run": "./bin/ex4.out 1987",
+      "input": "",
+      "output": "MCMLXXXVII",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Ex4 Test2",
+      "setup": "",
+      "run": "./bin/ex4.out 2015",
+      "input": "",
+      "output": "MMXV",
+      "comparison": "exact",
+      "timeout": 10,
+      "points": 5
+    }
+  ]
+}
