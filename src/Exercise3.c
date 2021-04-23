@@ -15,21 +15,46 @@ Ex:
 #include <stdlib.h>
 #include <math.h>
 
-void Ex3(int m, int arr1[], int n, int arr2[]){
-	//Your codes here
-	
+void Ex3(int m, int arr1[], int n, int arr2[])
+{
+	// Your codes here
+	int arr[m + n]; 
+    for (int i = 0; i < m + n; i++)
+    {
+        if (i >=0 && i < m)
+            arr[i] = arr1[i];
+        else
+            arr[i] = arr2[i - m];
+    }
+
+    if ((m + n) % 2 == 0)
+    {
+        int idx1 = (m + n) / 2;
+        int idx2 = idx1--;
+        float med = ((float) arr[idx1] + (float) arr[idx2]) / 2;
+        printf("Median is %.1f", med);
+    }
+    else
+    {
+        int idx = (m + n - 1) / 2;
+        int med = arr[idx];
+        printf("Median is %d", med);   
+    }
 }
 
-int main(int argc, char *argv[]) {
-	//testing variable, applying it to your algorithm for auto-evaluating
+int main(int argc, char *argv[]) 
+{
+	// testing variable, applying it to your algorithm for auto-evaluating
 	int length_of_1st_array = atoi(argv[1]);
 	int length_of_2nd_array = atoi(argv[length_of_1st_array + 2]);
 	int arr1[length_of_1st_array], arr2[length_of_2nd_array], i;
-	for(i=0; i<length_of_1st_array;i++){
-		arr1[i] = atoi(argv[i+2]);
+	for (i = 0; i < length_of_1st_array; i++)
+	{
+		arr1[i] = atoi(argv[i + 2]);
 	}
 
-	for(i=0; i<length_of_2nd_array;i++){
+	for (i = 0; i < length_of_2nd_array; i++)
+	{
 		arr2[i] = atoi(argv[i + length_of_1st_array + 3]);
 	}
 

@@ -7,24 +7,36 @@ Ex:
 | Output: [0 1]                             |
 |___________________________________________|
 */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 
-void Ex2(int arr[], int n, int target){
-	//Your codes here
-	
+void Ex2(int arr[], int n, int target)
+{
+	// Your codes here
+	for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = i + 1; j < n; j++)
+        {
+            if (arr[i] + arr[j] == target)
+            {
+                printf("[%d %d]", i, j);
+                return;
+            }
+        }
+    }
 }
 
-int main(int argc, char *argv[]) {
-	//testing variable, applying it to your algorithm for auto-evaluating
+int main(int argc, char *argv[]) 
+{
+	// testing variable, applying it to your algorithm for auto-evaluating
 	argc--;
 	int target = atoi(argv[argc]);
 	argc--;
 	int testcase[argc], i;
-	for(i=0; i<argc;i++){
-		testcase[i] = atoi(argv[i+1]);
+	for (i = 0; i < argc; i++)
+	{
+		testcase[i] = atoi(argv[i + 1]);
 	}
 
 	Ex2(testcase, argc, target);
