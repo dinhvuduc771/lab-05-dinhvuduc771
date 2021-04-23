@@ -18,6 +18,25 @@ Ex:
 void Ex3(int m, int arr1[], int n, int arr2[]){
 	//Your codes here
 	
+	int id1, id2;
+	float mid;
+	int arr[m+n];
+	for (int i=0;i<m+n;i++)
+	{
+		if(i>=0 && i<m)
+		arr[i]=arr1[i];
+		else
+		arr[i]=arr2[i-m];
+	}
+
+if((m+n)%2==0)
+{
+	id1=(m+n)/2;
+	id2=id1--;
+	float mid=((float) arr[id1]+(float) arr[id2])/2;
+printf("%.2f",mid);
+}	
+
 }
 
 int main(int argc, char *argv[]) {
